@@ -4,13 +4,105 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana;
+    color: var(--text-color);
+    background-color: var(--panel-bg-color);
+    height: 100%;
+}
+
+
+:root {
+    --panel-bg-color: #f9fbfc;
+    --container-bg-color: #f1f2f6;
+    --text-color: #404858;
+    --by-color: rgb(164, 162, 162);
+    --border-bottom-color: 2px solid #404858;
+    --input-hover-bg-color: #bbc4ce;
+}
+
+:root[theme="dark"] {
+    --panel-bg-color: #2f3542;
+    --container-bg-color: #57606f;
+    --text-color: #ced6e0;
+    --by-color: rgb(164, 162, 162);
+    --border-bottom-color: 2px solid #ced6e0;
+    --input-hover-bg-color: #3d4856;
+}
+
+i, h6 {
+    color: var(--by-color);
+}
+
+.linkNews {
+    border-bottom: var(--border-bottom-color);
+}
+
+input[type="button"] {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--panel-bg-color);
+    color: var(--text-color);
+    font-size: 17px;
+}
+
+input:hover {
+    transition: 2s ease;
+    background-color: var(--input-hover-bg-color);
+}
+
+html[theme="dark"] nav ul a:hover {
+    border-bottom: var(--border-bottom-color);
+    color: var(--text-color);
+}
+
+html[theme="dark"] nav ul a{
+    color: var(--text-color);
+}
+
+html[theme="dark"] h1 {
+    color: var(--text-color);
+}
+
+html[theme="dark"] nav.nav-link {
+    background-color: var(--panel-bg-color);
+    color: var(--text-color);
+}
+
+
+.nav-link {
+    font-size: 22px;
+}
+
+.navbar {
+    background-color: var(--panel-bg-color);
+}
+
+.navbar-brand {
+    text-align: center;
+    background-color: var(--panel-bg-color);
+}
+
+
 .nav-link:hover {
-    border-bottom: 1px solid black;
+    border-bottom: var(--border-bottom-color);
 }
 
 #navbarNav {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    color: var(--text-color);
 }
 
 .container ul {
@@ -19,6 +111,15 @@
     justify-content: center;
 }
 
-.navbar-brand h3 {
-    text-align: center;
+.photoPadding {
+    padding-left: 40px;
+    padding-right: 40px;
 }
+
+.icon-size {
+    font-size: 44px;
+    color: gray;
+}
+
+
+
